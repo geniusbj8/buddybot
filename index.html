@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BuddyBot</title>
+    
+    <!-- Linking FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    
+    <!-- Linking custom styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Full-Page Chatbot -->
+    <div class="chatbot-fullpage">
+      
+      <!-- Chatbot Header -->
+      <div class="chat-header">
+        <div class="header-info">
+          <!-- BuddyBot logo with separate colors for Buddy and Bot -->
+          <i class="fas fa-robot chatbot-logo"></i>
+          <h2 class="logo-text">
+            <span class="buddy">Buddy</span><span class="bot">Bot</span>
+          </h2>
+        </div>
+        <!-- Close button -->
+        <button id="close-chatbot" class="fa-solid fa-arrow-down"></button>
+      </div>
+
+      <!-- Chatbot Body -->
+      <div class="chat-body">
+        <div class="message bot-message">
+          <i class="fas fa-robot bot-avatar"></i>
+          <div class="message-text">
+            Hey there! <br />
+            How can I help you today?
+          </div>
+        </div>
+      </div>
+
+      <!-- Chatbot Footer -->
+      <div class="chat-footer">
+        <form action="#" class="chat-form">
+          <textarea placeholder="Type a message..." class="message-input" required></textarea>
+          <div class="chat-controls">
+            <!-- Emoji picker button -->
+            <button type="button" id="emoji-picker" class="fa-solid fa-face-smile"></button>
+            
+            <!-- File upload section -->
+            <div class="file-upload-wrapper">
+              <input type="file" accept="image/*" id="file-input" hidden />
+              <img src="#" alt="Uploaded file preview" />
+              <button type="button" id="file-upload" class="fa-solid fa-paperclip"></button>
+              <button type="button" id="file-cancel" class="fa-solid fa-xmark"></button>
+            </div>
+
+            <!-- Send message button -->
+            <button type="submit" id="send-message" class="fa-solid fa-paper-plane"></button>
+          </div>
+        </form>
+        <!-- Footer copyright -->
+        <p style="text-align: center;">&copy; GeniusBJ 2024</p>
+      </div>
+
+    </div>
+
+    <!-- Linking Emoji Mart script for emoji picker -->
+    <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+
+    <!-- Linking custom script -->
+    <script src="script.js"></script>
+  </body>
+</html>
